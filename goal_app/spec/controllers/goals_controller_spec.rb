@@ -24,7 +24,7 @@ RSpec.describe GoalsController, type: :controller do
 
     context 'valid parameters to my update' do
       it "redirects to goals_url" do
-        patch :update, params: { goal: { objective: goal.objective, user_id: user.id, completed: user.completed, private: user.private} }
+        patch :update, params: { goal: { objective: goal.objective, user_id: user.id, completed: false, shared: user.shared} }
         expect(response).to have_http_status(:success)
         expect(response).to redirect_to(goals_url)
       end

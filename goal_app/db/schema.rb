@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20171031000840) do
     t.boolean "completed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "private"
+    t.boolean "shared", null: false
     t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
